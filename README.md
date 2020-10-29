@@ -4,7 +4,7 @@ If you have a tab open with <https://www.coingecko.com/account/candy> this exten
 
 The extension icon also has an indicator if you do not have the tab open, and can be clicked to open/select the candy tab.
 
-To be released on Chrome Web Store and Firefox Add-ons.
+Released on [Chrome Web Store](https://chrome.google.com/webstore/detail/ogdmacmpiojggeojaapfapjljcodigah) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/coingecko-candy-collector).
 
 Functionality tested on 2020-10-29.
 
