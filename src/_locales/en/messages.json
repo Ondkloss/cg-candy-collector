@@ -1,0 +1,14 @@
+{
+    "appName": {
+        "message": "CoinGecko Candy Collector",
+        "description": "CoinGecko Candy Collector"
+    },
+    "appDesc": {
+        "message": "Keep https://www.coingecko.com/account/candy open and have your CoinGecko candy automatically collected",
+        "description": "Keep https://www.coingecko.com/account/candy open and have your CoinGecko candy automatically collected"
+    },
+    "warning": {
+        "message": "TAB NOT OPEN! CLICK TO OPEN",
+        "description": "TAB NOT OPEN! CLICK TO OPEN"
+    }
+}
