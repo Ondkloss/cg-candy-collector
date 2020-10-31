@@ -7,6 +7,7 @@ const checkCandy = () => {
   if (ele.tagName === 'INPUT') {
     output('clicking')
     ele.click()
+    setTimeout(location.reload, 5000)
   }
   else if (ele.tagName === 'DIV') {
     output('scouting')
