@@ -6,9 +6,13 @@ The extension icon also has an indicator if you do not have the tab open, and ca
 
 Released on [Chrome Web Store](https://chrome.google.com/webstore/detail/ogdmacmpiojggeojaapfapjljcodigah) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/coingecko-candy-collector).
 
-Functionality tested on 2020-10-29.
+Functionality tested on 2020-11-10.
 
 ## Changelog
+
+### 1.0.1
+
+Fix for running over a long time. Output is now gathered in background page.
 
 ### 1.0.0
 

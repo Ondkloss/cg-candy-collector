@@ -2,6 +2,11 @@ chrome.browserAction.setBadgeBackgroundColor({ color: '#F00' })
 
 const CANDY_URL = 'https://www.coingecko.com/account/candy'
 
+const output = text => {
+  const datetime = new Date().toLocaleString(navigator.language)
+  console.log(`[${datetime}]`, text)
+}
+
 const checkCandyTabOpen = () => {
   chrome.tabs.query({
     url: CANDY_URL + '*'
@@ -35,6 +40,10 @@ chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.query({
     url: CANDY_URL + '*'
   }, result => evaluateTabOpening(result))
+})
+
+chrome.runtime.onMessage.addListener((request) => {
+  output(request)
 })
 
 setInterval(checkCandyTabOpen, 5000)

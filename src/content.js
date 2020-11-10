@@ -1,24 +1,31 @@
-const output = text => {
-  console.log(new Date().toISOString(), 'CoinGecko Coin Collector:', text)
+const message = text => {
+  chrome.runtime.sendMessage(text)
+}
+
+const reload = () => {
+  message('reloading')
+  location.reload()
 }
 
 const checkCandy = () => {
-  const ele = document.getElementsByClassName('collect-candy-button')[0]
-  if (ele.tagName === 'INPUT') {
-    output('clicking')
-    ele.click()
-    setTimeout(location.reload, 5000)
-  }
-  else if (ele.tagName === 'DIV') {
-    output('scouting')
+  const inputElement = document.querySelectorAll('input.collect-candy-button')[0]
+  const divElement = document.querySelectorAll('div.collect-candy-button')[0]
 
-    const cd = document.getElementById('next-daily-reward-countdown-timer')
-    if (cd.innerHTML === '0:00:00') {
-      location.reload()
+  if (inputElement && inputElement.offsetParent) {
+    message('clicking')
+    inputElement.click()
+    setTimeout(reload, 5000)
+  }
+  else if (divElement) {
+    message('scouting')
+
+    const cooldown = document.getElementById('next-daily-reward-countdown-timer')
+    if (cooldown.innerHTML === '0:00:00') {
+      reload()
     }
   }
   else {
-    output('could not find expected elements')
+    message('could not find expected elements')
   }
 }
 
