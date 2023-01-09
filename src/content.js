@@ -8,7 +8,7 @@ const reload = () => {
 }
 
 const checkCandy = () => {
-  const inputElement = document.querySelectorAll('input.collect-candy-button')[0]
+  const inputElement = document.querySelectorAll('button.collect-candy-button')[0]
   const divElement = document.querySelectorAll('div.collect-candy-button')[0]
 
   if (inputElement && inputElement.offsetParent) {
