@@ -1,14 +1,18 @@
 # ![Gecko logo](src/images/logo16.png "Gecko logo") CoinGecko Candy Collector
 
-If you have a tab open with <https://www.coingecko.com/account/candy> this extension automatically injects JavaScript to periodically check and click on the candy collect button when it is available.
+If you have a tab open with <https://www.coingecko.com/en/candy> (or other localization) this extension automatically injects JavaScript to periodically check and click on the candy collect button when it is available.
 
 The extension icon also has an indicator if you do not have the tab open, and can be clicked to open/select the candy tab.
 
 Released on [Chrome Web Store](https://chrome.google.com/webstore/detail/ogdmacmpiojggeojaapfapjljcodigah) and [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/coingecko-candy-collector).
 
-Functionality tested on 2023-01-09.
+Functionality tested on 2024-04-26.
 
 ## Changelog
+
+### 1.0.3
+
+Fixed collection, due to change in DOM.
 
 ### 1.0.2
 

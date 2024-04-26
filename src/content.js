@@ -8,19 +8,17 @@ const reload = () => {
 }
 
 const checkCandy = () => {
-  const inputElement = document.querySelectorAll('button.collect-candy-button')[0]
-  const divElement = document.querySelectorAll('div.collect-candy-button')[0]
+  const buttonElement = document.getElementById('collectButton')
 
-  if (inputElement && inputElement.offsetParent) {
+  if (buttonElement && !buttonElement.disabled) {
     message('clicking')
-    inputElement.click()
+    buttonElement.click()
     setTimeout(reload, 5000)
   }
-  else if (divElement) {
+  else if (buttonElement && buttonElement.disabled) {
     message('scouting')
-
-    const cooldown = document.getElementById('next-daily-reward-countdown-timer')
-    if (cooldown.innerHTML === '0:00:00') {
+    const cooldown = buttonElement.firstElementChild
+    if (cooldown?.innerHTML && cooldown.innerHTML.startsWith('0:00:00')) {
       reload()
     }
   }
@@ -30,4 +28,4 @@ const checkCandy = () => {
 }
 
 setInterval(checkCandy, 3600 * 1000)
-checkCandy()
+setTimeout(checkCandy, 5000)

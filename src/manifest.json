@@ -1,12 +1,14 @@
 {
     "name": "__MSG_appName__",
     "description": "__MSG_appDesc__",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "manifest_version": 2,
     "default_locale": "en",
     "permissions": [
         "tabs",
-        "https://www.coingecko.com/account/candy*"
+        "https://www.coingecko.com/account/candy*",
+        "https://www.coingecko.com/candy*",
+        "https://www.coingecko.com/*/candy*"
     ],
     "background": {
         "scripts": [
@@ -16,7 +18,9 @@
     "content_scripts": [
         {
             "matches": [
-                "https://www.coingecko.com/account/candy*"
+                "https://www.coingecko.com/account/candy*",
+                "https://www.coingecko.com/candy*",
+                "https://www.coingecko.com/*/candy*"
             ],
             "js": [
                 "content.js"
