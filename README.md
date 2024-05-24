@@ -10,6 +10,10 @@ Functionality tested on 2024-04-26.
 
 ## Changelog
 
+### 1.0.4
+
+Fixed collection, due to change in DOM.
+
 ### 1.0.3
 
 Fixed collection, due to change in DOM.
